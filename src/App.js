@@ -1,10 +1,10 @@
-import VirtualScroll from "./components/VirtualScroll";
+import VirtualInfiniteScroll from "./components/VirtualInfiniteScroll";
 import Item from "./components/Item";
 
 function App() {
   return (
     <div className="App">
-      <VirtualScroll
+      <VirtualInfiniteScroll
         RenderItem={Item}
         itemHeight={50}
         containerHeight={500}

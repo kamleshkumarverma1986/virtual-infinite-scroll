@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
-const VirtualScroll = ({
+const VirtualInfiniteScroll = ({
   fetchDataURL,
   containerHeight,
   itemHeight,
@@ -112,4 +112,4 @@ const VirtualScroll = ({
   );
 };
 
-export default VirtualScroll;
+export default VirtualInfiniteScroll;
