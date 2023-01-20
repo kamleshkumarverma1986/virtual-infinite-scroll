@@ -54,7 +54,7 @@ const VirtualScroll = ({
 
   const getRowData = useMemo(() => {
     const endIndex = Math.min(
-      startIndex + Math.round(containerHeight / itemHeight) + buffer,
+      startIndex + Math.round(containerHeight / itemHeight) + 2 * buffer,
       itemList.length
     );
     let visibleListItems = itemList.slice(startIndex, endIndex);
@@ -63,14 +63,14 @@ const VirtualScroll = ({
         endIndex === itemList.length &&
         index === visibleListItems.length - 1
       ) {
-        return <RenderItem ref={lastItemRef} key={index} item={item} />;
+        return <RenderItem ref={lastItemRef} key={item.key} item={item} />;
       } else {
-        return <RenderItem key={index} item={item} />;
+        return <RenderItem key={item.key} item={item} />;
       }
     });
     if (loading && endIndex === itemList.length) {
       visibleListItems.push(
-        <div>
+        <div key="loading">
           <center>
             <h3>Loading...</h3>
           </center>

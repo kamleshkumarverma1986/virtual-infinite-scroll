@@ -8,8 +8,8 @@ function App() {
         RenderItem={Item}
         itemHeight={50}
         containerHeight={500}
-        buffer={0}
-        fetchDataURL="http://openlibrary.org/search.json?q=hello"
+        buffer={5}
+        fetchDataURL="http://openlibrary.org/search.json?q=kaka"
       />
     </div>
   );
